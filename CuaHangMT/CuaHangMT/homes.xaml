@@ -1,0 +1,314 @@
+﻿<Window x:Class="CuaHangMT.homes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CuaHangMT.View"
+        mc:Ignorable="d"
+        Title="Homes" SnapsToDevicePixels="True" Height="700" Width="1200"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True"
+        MouseDown="Window_MouseDown">
+
+
+    <Grid Margin="-4,0,4,-19" 
+            Background="#212529">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+
+
+
+
+
+
+
+        <Button x:Name="btnInfor"
+                Margin="23,80,997,599"
+                Foreground="White"
+                Content="Cá Nhân"
+                FontFamily="Times New Roman"
+                FontSize="20"
+                Background="#0BCDFF" RenderTransformOrigin="-0.054,9.793" Click="btnInfor_Click"  >
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border 
+                            CornerRadius="10"
+                            Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                                HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="btnXuat"
+            Margin="24,160,997,519"
+            Foreground="White"
+            Content="Xuất"
+            FontFamily="Times New Roman"
+            FontSize="20"
+            Background="#0BCDFF" RenderTransformOrigin="-0.054,9.793" Click="btnXuat_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border 
+                        CornerRadius="10"
+                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="btnNhap"
+            Margin="24,220,998,459"
+            Foreground="White"
+            Content="Nhập"
+            FontFamily="Times New Roman"
+            FontSize="20"
+            Background="#0BCDFF" RenderTransformOrigin="-0.054,9.793" Click="btnNhap_Click" >
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border 
+                        CornerRadius="10"
+                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="btnDangXuat"
+            Margin="26,20,996,659"
+            Foreground="White"
+            Content="Đăng Xuất"
+            FontFamily="Times New Roman"
+            FontSize="20"
+            Background="#0BCDFF" RenderTransformOrigin="-0.054,9.793">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border 
+                        CornerRadius="10"
+                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="btnKhachHang"
+            Margin="24,280,997,400"
+            Foreground="White"
+            Content="Khách Hàng"
+            FontFamily="Times New Roman"
+            FontSize="20"
+            Background="#0BCDFF" RenderTransformOrigin="-0.054,9.793" Click="btnKhachHang_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border 
+                        CornerRadius="10"
+                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="btnNhaCungCap"
+            Margin="24,400,996,279"
+            Foreground="White"
+            Content="Nhà Cung Cấp"
+            FontFamily="Times New Roman"
+            FontSize="20"
+            Background="#0BCDFF" RenderTransformOrigin="-0.054,9.793" Click="btnNhaCungCap_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border 
+                        CornerRadius="10"
+                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="btnMayTinh"
+            Margin="24,460,996,219"
+            Foreground="White"
+            Content="Máy Tính"
+            FontFamily="Times New Roman"
+            FontSize="20"
+            Background="#0BCDFF" RenderTransformOrigin="-0.054,9.793" Click="btnMayTinh_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border 
+                        CornerRadius="10"
+                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="btnDanhMuc"
+            Margin="26,345,996,340"
+            Foreground="White"
+            Content="Danh Mục"
+            FontFamily="Times New Roman"
+            FontSize="20"
+            Background="#0BCDFF" RenderTransformOrigin="-0.054,9.793" Click="btnDanhMuc_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border 
+                        CornerRadius="10"
+                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="btnTaiKhoan"
+            Margin="25,654,995,25"
+            Foreground="White"
+            Content="Tài Khoản"
+            FontFamily="Times New Roman"
+            FontSize="20"
+            Background="#0BCDFF" RenderTransformOrigin="-0.054,9.793" Click="btnTaiKhoan_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border 
+                        CornerRadius="10"
+                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="btnThongKe"
+            Margin="26,540,996,140"
+            Foreground="White"
+            Content="Thống Kê Nhập"
+            FontFamily="Times New Roman"
+            FontSize="20"
+            Background="#0BCDFF" RenderTransformOrigin="-0.054,9.793" Click="btnThongKe_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border 
+                        CornerRadius="10"
+                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="btnThongKeXuat"
+            Margin="26,596,996,83"
+            Foreground="White"
+            Content="Thống Kê Xuất"
+            FontFamily="Times New Roman"
+            FontSize="20"
+            Background="#0BCDFF" RenderTransformOrigin="-0.054,9.793" Click="btnThongKeXuat_Click" >
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border 
+                        CornerRadius="10"
+                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Grid x:Name="GridContainer" Margin="246,44,3,-27" Grid.RowSpan="2">
+            <local:KhachHang x:Name="khachhang" Visibility="Collapsed"></local:KhachHang>
+            <local:DanhMuc x:Name="danhmuc" Visibility="Collapsed"></local:DanhMuc>
+            <local:NhaCungCap x:Name="nhacungcap" Visibility="Collapsed"></local:NhaCungCap>
+            <local:MayTinh x:Name="maytinh" Visibility="Collapsed"></local:MayTinh>
+            <local:Nhap x:Name="nhap" Visibility="Collapsed"></local:Nhap>
+            <local:TaiKhoanView x:Name="taikhoan" Visibility="Collapsed"></local:TaiKhoanView>
+            <local:ThongKeNhap x:Name="thongkenhap" Visibility="Collapsed"></local:ThongKeNhap>
+            <local:Xuat x:Name="xuat" Visibility="Collapsed"></local:Xuat>
+            <local:ThongTinCaNhan x:Name="thongtincanhan" Visibility="Collapsed"></local:ThongTinCaNhan>
+            <local:ThongKeXuat x:Name="thongkexuat" Visibility="Collapsed"></local:ThongKeXuat>
+
+        </Grid>
+
+        <Grid>
+
+
+            <Button x:Name="btnMinimize"                           
+                            BorderThickness="0"
+                            Content="-"
+                            Foreground="White"
+                            FontSize="16"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Click="btnMinimize_Click" Margin="1090,-16,42,662">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#28AEED"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#278BEF"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="18" Height="18"
+                                        CornerRadius="9"
+                                        Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+
+            </Button>
+
+
+            <Button x:Name="btnClose"                          
+                            BorderThickness="0"
+                            Content="X"
+                            Foreground="White"
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Click="btnClose_Click" Margin="1132,-8,2,669">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#DA34AE"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#C62DAE"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="18" Height="18"
+                                        CornerRadius="9"
+                                        Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Grid>
+       
+
+    </Grid>
+</Window>

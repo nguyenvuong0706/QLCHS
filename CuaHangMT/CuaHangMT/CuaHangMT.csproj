@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{39F6873E-AD51-4847-AC18-CBEF6317D489}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CuaHangMT</RootNamespace>
+    <AssemblyName>CuaHangMT</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Syncfusion.Licensing, Version=23.1460.44.0, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.23.1.44\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfInput.WPF, Version=23.1460.44.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.SfInput.WPF.23.1.44\lib\net46\Syncfusion.SfInput.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.WPF, Version=23.1460.44.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Shared.WPF.23.1.44\lib\net46\Syncfusion.Shared.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Controller\ChitietNhapController.cs" />
+    <Compile Include="Controller\ChitietXuatController.cs" />
+    <Compile Include="Controller\DanhMucController.cs" />
+    <Compile Include="Controller\HoaDonNhapController.cs" />
+    <Compile Include="Controller\HoaDonXuatController.cs" />
+    <Compile Include="Controller\KhachHangController.cs" />
+    <Compile Include="Controller\MayTinhController.cs" />
+    <Compile Include="Controller\NhaCungCapController.cs" />
+    <Compile Include="Controller\NhapController.cs" />
+    <Compile Include="Controller\XuatController.cs" />
+    <Compile Include="Model\ChiTietNhapModel.cs" />
+    <Compile Include="Model\ChiTietXuatModel.cs" />
+    <Compile Include="Model\DanhMucModel.cs" />
+    <Compile Include="Model\HoaDonNhapModel.cs" />
+    <Compile Include="Model\HoaDonXuatModel.cs" />
+    <Compile Include="Model\KhachHangModel.cs" />
+    <Compile Include="Model\NhaCungCapModel.cs" />
+    <Compile Include="MyRegular.cs" />
+    <Compile Include="View\DanhMuc.xaml.cs">
+      <DependentUpon>DanhMuc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\KhachHang.xaml.cs">
+      <DependentUpon>KhachHang.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MayTinh.xaml.cs">
+      <DependentUpon>MayTinh.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NhaCungCap.xaml.cs">
+      <DependentUpon>NhaCungCap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Nhap.xaml.cs">
+      <DependentUpon>Nhap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TaiKhoanView.xaml.cs">
+      <DependentUpon>TaiKhoanView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ThongKeNhap.xaml.cs">
+      <DependentUpon>ThongKeNhap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ThongKeXuat.xaml.cs">
+      <DependentUpon>ThongKeXuat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ThongTinCaNhan.xaml.cs">
+      <DependentUpon>ThongTinCaNhan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Xuat.xaml.cs">
+      <DependentUpon>Xuat.xaml</DependentUpon>
+    </Compile>
+    <Page Include="homes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\DataProvider.cs" />
+    <Compile Include="Controller\TaiKhoanController.cs" />
+    <Compile Include="homes.xaml.cs">
+      <DependentUpon>homes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="View\DanhMuc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\KhachHang.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MayTinh.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\NhaCungCap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Nhap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TaiKhoanView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ThongKeNhap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ThongKeXuat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ThongTinCaNhan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Xuat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\TaiKhoan.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\bgPKA.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\key-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Logo-DH-Phenikaa-V-Wh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\shutdown_def.png" />
+    <Resource Include="images\shutdown_mo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\666201.png" />
+    <Resource Include="images\back-image.jpg" />
+    <Resource Include="images\customer_page.png" />
+    <Resource Include="images\dangnhap.jpg" />
+    <Resource Include="images\home_page.png" />
+    <Resource Include="images\icons8-analytics-50.png" />
+    <Resource Include="images\icons8-category-50.png" />
+    <Resource Include="images\icons8-computer-50.png" />
+    <Resource Include="images\icons8-customer-50.png" />
+    <Resource Include="images\icons8-home-50.png" />
+    <Resource Include="images\icons8-invoice-50.png" />
+    <Resource Include="images\icons8-log-out-50.png" />
+    <Resource Include="images\icons8-shipment-50.png" />
+    <Resource Include="images\icons8-user-50.png" />
+    <Resource Include="images\img.icons8-keyboard.png" />
+    <Resource Include="images\img_customer.png" />
+    <Resource Include="images\img_home.png" />
+    <Resource Include="images\img_order.png" />
+    <Resource Include="images\img_product.png" />
+    <Resource Include="images\img_setting.png" />
+    <Resource Include="images\img_shipment.png" />
+    <Resource Include="images\img_transaction.png" />
+    <Resource Include="images\logo.png" />
+    <Resource Include="images\order_page.png" />
+    <Resource Include="images\password.png" />
+    <Resource Include="images\product_page.png" />
+    <Resource Include="images\setting_page.png" />
+    <Resource Include="images\shipment_page.png" />
+    <Resource Include="images\transaction_page.png" />
+    <Resource Include="images\user.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

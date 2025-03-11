@@ -1,0 +1,319 @@
+﻿<UserControl x:Class="CuaHangMT.View.MayTinh"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+             xmlns:local="clr-namespace:CuaHangMT.View"
+              mc:Ignorable="d" Width="900" Height="600">
+    <Grid>
+        <Border CornerRadius="20"
+        Background="#212529">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60.48"/>
+                        <ColumnDefinition Width="79.52"/>
+                        <ColumnDefinition Width="380"/>
+                        <ColumnDefinition Width="120"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="txtTimKiem"
+                         FontSize="21"
+                         FontWeight="Medium"
+                         FontFamily="Times New Roman"
+                         Background="#272B2F"
+                         Grid.Column="2"
+                         BorderThickness="0"
+                         Margin="190,10,-40,10" Grid.ColumnSpan="2">
+                    </TextBox>
+                    <Button x:Name="btnTimKiem"
+                    Grid.Column="3"
+                    Margin="185,10,-174,10"
+                    Foreground="White"
+                    Content="Tim Kiem"
+                    FontFamily="Times New Roman"
+                    FontSize="20"
+                    Background="#0BCDFF">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border 
+                        CornerRadius="10"
+                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                          HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <ListView x:Name="dgvMT" Grid.ColumnSpan="4" Margin="-1,78,-260,-239"  Background="#272B2F" Foreground="White"  >
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Mã" Width="120" DisplayMemberBinding="{Binding Ma}">
+                                    <GridViewColumn.HeaderContainerStyle>
+                                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                                            <Setter Property="Foreground" Value="White" />
+                                            <Setter Property="Background" Value="#272B2F" />
+                                            <Setter Property="FontSize" Value="20"/>
+                                            <Setter Property="FontFamily" Value="Times New Roman"/>
+                                        </Style>
+                                    </GridViewColumn.HeaderContainerStyle>
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding }" Foreground="White" />
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Tên" Width="180" DisplayMemberBinding="{Binding Ten}">
+                                    <GridViewColumn.HeaderContainerStyle>
+                                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                                            <Setter Property="Foreground" Value="White" />
+                                            <Setter Property="Background" Value="#272B2F" />
+                                            <Setter Property="FontSize" Value="20"/>
+                                            <Setter Property="FontFamily" Value="Times New Roman"/>
+                                        </Style>
+                                    </GridViewColumn.HeaderContainerStyle>
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding }" Foreground="White" />
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Đơn giá nhập" Width="200" DisplayMemberBinding="{Binding DonGiaNhap}">
+                                    <GridViewColumn.HeaderContainerStyle>
+                                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                                            <Setter Property="Foreground" Value="White" />
+                                            <Setter Property="Background" Value="#272B2F" />
+                                            <Setter Property="FontSize" Value="20"/>
+                                            <Setter Property="FontFamily" Value="Times New Roman"/>
+                                        </Style>
+                                    </GridViewColumn.HeaderContainerStyle>
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding }" Foreground="White" />
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Đơn giá xuất" Width="200" DisplayMemberBinding="{Binding DonGiaXuat}">
+                                    <GridViewColumn.HeaderContainerStyle>
+                                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                                            <Setter Property="Foreground" Value="White" />
+                                            <Setter Property="Background" Value="#272B2F" />
+                                            <Setter Property="FontSize" Value="20"/>
+                                            <Setter Property="FontFamily" Value="Times New Roman"/>
+                                        </Style>
+                                    </GridViewColumn.HeaderContainerStyle>
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding }" Foreground="White" />
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Số lượng" Width="200" DisplayMemberBinding="{Binding SoLuong}">
+                                    <GridViewColumn.HeaderContainerStyle>
+                                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                                            <Setter Property="Foreground" Value="White" />
+                                            <Setter Property="Background" Value="#272B2F" />
+                                            <Setter Property="FontSize" Value="20"/>
+                                            <Setter Property="FontFamily" Value="Times New Roman"/>
+                                        </Style>
+                                    </GridViewColumn.HeaderContainerStyle>
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding }" Foreground="White" />
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+                <Button x:Name="btnThemMoi"
+            Margin="655,364,146,140"
+            Foreground="White"
+            Content="Thêm mới"
+            FontFamily="Times New Roman"
+            FontSize="20"
+            Background="#0BCDFF" RenderTransformOrigin="-0.054,9.793" Grid.Row="1" Click="btnThemMoi_Click">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border 
+                        CornerRadius="10"
+                        Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button x:Name="btnCapNhap"
+            Margin="772,364,29,140"
+            Foreground="White"
+            Content="Cập nhập"
+            FontFamily="Times New Roman"
+            FontSize="20"
+            Background="#0BCDFF" RenderTransformOrigin="-0.054,9.793" Grid.Row="1" Click="btnCapNhap_Click" >
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border 
+                        CornerRadius="10"
+                        Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button x:Name="btnXoa"
+            Margin="655,411,146,93"
+            Foreground="White"
+            Content="Xóa"
+            FontFamily="Times New Roman"
+            FontSize="20"
+            Background="#0BCDFF" RenderTransformOrigin="-0.054,9.793" Grid.Row="1" Click="btnXoa_Click">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border 
+                        CornerRadius="10"
+                        Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <TextBlock Text="Danh mục : "
+            Foreground="White"
+            FontSize="20"
+            FontFamily="Times New Roman"
+            Grid.Column="0"
+            VerticalAlignment="Top"
+            Margin="19,303,739,0" Grid.Row="1" Height="27"/>
+                <TextBlock Text="Giá nhập : "
+            Foreground="White"
+            FontSize="20"
+            FontFamily="Times New Roman"
+            Grid.Column="0"
+            VerticalAlignment="Top"
+            Margin="19,361,647,0" Grid.Row="1"/>
+                <TextBlock Text="Tên : "
+            Foreground="White"
+            FontSize="20"
+            FontFamily="Times New Roman"
+            Grid.Column="0"
+            VerticalAlignment="Top"
+            Margin="19,418,647,0" Grid.Row="1"/>
+
+                <TextBox x:Name="txtTenMT"
+                FontSize="22"
+                FontWeight="Medium"
+                FontFamily="Times New Roman"
+                Background="#272B2F"
+                BorderThickness="0"
+                Margin="150,408,573,89" 
+                         Grid.Row="1" 
+                         IsUndoEnabled="True" 
+                         Foreground="White"
+                         Text="">
+                </TextBox>
+                <TextBlock Text="Mã : "
+            Foreground="White"
+            FontSize="20"
+            FontFamily="Times New Roman"
+            Grid.Column="0"
+            VerticalAlignment="Top"
+            Margin="356,303,402,0" Grid.Row="1" Height="27">
+                </TextBlock>
+                <TextBlock Text="Giá xuất : "
+            Foreground="White"
+            FontSize="20"
+            FontFamily="Times New Roman"
+            Grid.Column="0"
+            VerticalAlignment="Top"
+            Margin="356,359,402,0" Grid.Row="1" Height="27">
+                </TextBlock>
+                <Button x:Name="btnXem"
+            Margin="772,411,29,93"
+            Foreground="White"
+            Content="Xem"
+            FontFamily="Times New Roman"
+            FontSize="20"
+            Background="#0BCDFF" RenderTransformOrigin="-0.054,9.793"  Grid.Row="1" Click="btnXem_Click_1" >
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border 
+                        CornerRadius="10"
+                        Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <TextBlock Text="Số lượng : "
+                Foreground="White"
+                FontSize="20"
+                FontFamily="Times New Roman"
+                Grid.Column="0"
+                VerticalAlignment="Top"
+                Margin="356,420,402,0" Grid.Row="1" Height="27"/>
+                <TextBlock Text="Chi tiết : "
+                Foreground="White"
+                FontSize="20"
+                FontFamily="Times New Roman"
+                Grid.Column="0"
+                VerticalAlignment="Top"
+                Margin="19,479,647,0" Grid.Row="1"/>
+                <TextBox x:Name="txtChiTietMT"
+                FontSize="22"
+                FontWeight="Medium"
+                FontFamily="Times New Roman"
+                Background="#272B2F"
+                BorderThickness="0"
+                Margin="150,464,273,24"
+                         Grid.Row="1" 
+                         IsEnabled="True" 
+                         Foreground="White" 
+                         Text=""/>
+                <TextBox x:Name="txtGiaNhapMT"
+                    FontSize="22"
+                    FontWeight="Medium"
+                    FontFamily="Times New Roman"
+                    Background="#272B2F"
+                    BorderThickness="0"
+                    Margin="150,357,573,140" Grid.Row="1" IsUndoEnabled="True" Foreground="White" Text=""/>
+                <TextBox x:Name="txtMaMT"
+                    FontSize="22"
+                    FontWeight="Medium"
+                    FontFamily="Times New Roman"
+                    Background="#272B2F"
+                    BorderThickness="0"
+                    Margin="450,295,273,202" Grid.Row="1" IsUndoEnabled="True" Foreground="White" Text=""/>
+                <TextBox x:Name="txtGiaXuatMT"
+                    FontSize="22"
+                    FontWeight="Medium"
+                    FontFamily="Times New Roman"
+                    Background="#272B2F"
+                    BorderThickness="0"
+                    Margin="450,351,273,146" Grid.Row="1" IsUndoEnabled="True" Foreground="White" Text=""/>
+                <TextBox x:Name="txtSoLuongMT"
+                    FontSize="22"
+                    FontWeight="Medium"
+                    FontFamily="Times New Roman"
+                    Background="#272B2F"
+                    BorderThickness="0"
+                    Margin="450,412,273,85" Grid.Row="1" IsUndoEnabled="True" Foreground="White" Text=""/>
+
+
+
+
+            </Grid>
+
+        </Border>
+        <ComboBox x:Name="cbidDanhMuc" HorizontalAlignment="Left" Height="40" Margin="151,356,0,0" VerticalAlignment="Top" Width="177" Foreground="#FF0B0A0A"/>
+    </Grid>
+</UserControl>

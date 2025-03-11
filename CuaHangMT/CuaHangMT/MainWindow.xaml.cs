@@ -1,0 +1,71 @@
+﻿using CuaHangMT.Controller;
+using CuaHangMT.Model;
+using CuaHangMT.View;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace CuaHangMT
+{
+	/// <summary>
+	/// Interaction logic for MainWindow.xaml
+	/// </summary>
+	public partial class MainWindow : Window
+	{
+		public MainWindow()
+		{
+			InitializeComponent();
+		}
+
+		private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+		{
+			if (e.LeftButton == MouseButtonState.Pressed)
+				DragMove();
+		}
+
+		private void btnMinimize_Click(object sender, RoutedEventArgs e)
+		{
+			WindowState = WindowState.Minimized;
+		}
+
+		private void btnClose_Click(object sender, RoutedEventArgs e)
+		{
+			Application.Current.Shutdown();
+		}
+
+		private void btnLogin_Click(object sender, RoutedEventArgs e)
+		{
+
+			try
+			{
+				if (TaiKhoanController.Instance.CheckLogin(txtUser.Text, txtPass.Password))
+				{
+					this.Hide();
+					TaiKhoan acc = TaiKhoanController.Instance.GetByUsername(txtUser.Text);
+					homes f = new homes(acc);
+					f.ShowDialog();
+					this.Show();
+				}
+				else
+				{
+					MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác. Vui lòng kiểm tra lại!!!");
+				}
+			}
+			catch (Exception)
+			{
+				MessageBox.Show("Kết nối không thành công.\r\n Kiểm tra lại connection string hoặc liên hệ admin");
+			}
+		}
+	}
+}
